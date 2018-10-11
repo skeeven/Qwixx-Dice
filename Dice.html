@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.dice{
+	float:left;
+	width:32px;
+	background:#F5F5F5;
+	border:#999 1px solid;
+	padding:10px;
+	font-size:24px;
+	text-align:center;
+	margin:5px;
+}
+
+div.Reddice{
+    float:left;
+    width:32px;
+    background:Red;
+    border:#999 1px solid;
+    padding:10px;
+    font-size:24px;
+    text-align:center;
+    margin:5px;
+}
+
+div.Yellowdice{
+    float:left;
+    width:32px;
+    background:Yellow;
+    border:#999 1px solid;
+    padding:10px;
+    font-size:24px;
+    text-align:center;
+    margin:5px;
+    }
+
+div.Greendice{
+    float:left;
+    width:32px;
+    background:Green;
+    border:#999 1px solid;
+    padding:10px;
+    font-size:24px;
+    text-align:center;
+    margin:5px;
+    }
+
+div.Bluedice{
+    float:left;
+    width:32px;
+    background:Blue;
+    border:#999 1px solid;
+    padding:10px;
+    font-size:24px;
+    text-align:center;
+    margin:5px;
+}
+</style>
+<script>
+function rollDice(){
+    var die1 = document.getElementById("die1");
+    var die2 = document.getElementById("die2");
+    var reddie = document.getElementById("Reddie");
+    var yellowdie = document.getElementById("Yellowdie");
+    var greendie = document.getElementById("Greendie");
+    var bluedie = document.getElementById("Bluedie");
+    var status = document.getElementById("status");
+    
+    var activeDie1 = document.getElementById("ActiveDie1");
+    var redActive1 = document.getElementById("RedActive1");
+    var yellowActive1 = document.getElementById("YellowActive1");
+    var greenActive1 = document.getElementById("GreenActive1");
+    var blueActive1 = document.getElementById("BlueActive1");
+    
+    var activeDie2 = document.getElementById("ActiveDie2");
+    var redActive2 = document.getElementById("RedActive2");
+    var yellowActive2 = document.getElementById("YellowActive2");
+    var greenActive2 = document.getElementById("GreenActive2");
+    var blueActive2 = document.getElementById("BlueActive2");
+
+    var d1 = Math.floor(Math.random() * 6) + 1;
+    var d2 = Math.floor(Math.random() * 6) + 1;
+    var d3 = Math.floor(Math.random() * 6) + 1;
+    var d4 = Math.floor(Math.random() * 6) + 1;
+    var d5 = Math.floor(Math.random() * 6) + 1;
+    var d6 = Math.floor(Math.random() * 6) + 1;
+
+    var diceTotal = d1 + d2;
+   
+    var RedActiveDiceTotal1 = d1 + d3;
+    var YellowActiveDiceTotal1 = d1 + d4;
+    var GreenActiveDiceTotal1 = d1 + d5;
+    var BlueActiveDiceTotal1 = d1 + d6;
+
+    var RedActiveDiceTotal2 = d2 + d3;
+    var YellowActiveDiceTotal2 = d2 + d4;
+    var GreenActiveDiceTotal2 = d2 + d5;
+    var BlueActiveDiceTotal2 = d2 + d6;
+
+    die1.innerHTML = d1;
+    die2.innerHTML = d2;
+    reddie.innerHTML = d3;
+    yellowdie.innerHTML = d4;
+    greendie.innerHTML = d5;
+    bluedie.innerHTML = d6;
+    status.innerHTML = "You rolled "+diceTotal+".";
+    
+    activeDie1.innerHTML = "Active Player using Die 1, here are your options";
+
+    redActive1.innerHTML = "Red:"+RedActiveDiceTotal1;
+    yellowActive1.innerHTML = "Yellow:"+YellowActiveDiceTotal1;
+    greenActive1.innerHTML = "Green:"+GreenActiveDiceTotal1;
+    blueActive1.innerHTML = "Blue:"+BlueActiveDiceTotal1;
+    
+    activeDie2.innerHTML = "Active Player using Die 2, here are your options";
+
+    redActive2.innerHTML = "Red:"+RedActiveDiceTotal2;
+    yellowActive2.innerHTML = "Yellow:"+YellowActiveDiceTotal2;
+    greenActive2.innerHTML = "Green:"+GreenActiveDiceTotal2;
+    blueActive2.innerHTML = "Blue:"+BlueActiveDiceTotal2;
+
+    if(d1 == d2){
+       // status.innerHTML += " DOUBLES! You get a free turn!!";
+    }
+}
+</script>
+</head>
+<body>
+<div id="die1" class="dice">1</div>
+<div id="die2" class="dice">2</div>
+<div id="Reddie" class="Reddice">3</div>
+<div id="Yellowdie" class="Yellowdice">4</div>
+<div id="Greendie" class="Greendice">5</div>
+<div id="Bluedie" class="Bluedice">6</div>
+<button onclick="rollDice()">Roll Dice</button>
+<h2 id="status" style="clear:left;"></h2>
+
+<h2 id="ActiveDie1" style="clear:left;"></h2>
+<h3 id="RedActive1" style="clear:left;color:red;"></h3>
+<h3 id="YellowActive1" style="clear:left;color:yellow;background:black;"></h3>
+<h3 id="GreenActive1" style="clear:left;color:green;"></h3>
+<h3 id="BlueActive1" style="clear:left;color:blue;"></h3>
+
+<h2 id="ActiveDie2" style="clear:left;"></h2>
+<h3 id="RedActive2" style="clear:left;color:red;"></h3>
+<h3 id="YellowActive2" style="clear:left;color:yellow;background:black;"></h3>
+<h3 id="GreenActive2" style="clear:left;color:green;"></h3>
+<h3 id="BlueActive2" style="clear:left;color:blue;"></h3>
+</body>
+</html>
