@@ -1,0 +1,50 @@
+div.dice{
+	float:left;
+	width:32px;
+	background:#F5F5F5;
+	border:#999 1px solid;
+	padding:10px;
+	font-size:24px;
+	text-align:center;
+	margin:5px;
+}
+div.Reddice{
+    float:left;
+    width:32px;
+    background:Red;
+    border:#999 1px solid;
+    padding:10px;
+    font-size:24px;
+    text-align:center;
+    margin:5px;
+}
+div.Yellowdice{
+    float:left;
+    width:32px;
+    background:Yellow;
+    border:#999 1px solid;
+    padding:10px;
+    font-size:24px;
+    text-align:center;
+    margin:5px;
+    }
+div.Greendice{
+    float:left;
+    width:32px;
+    background:Green;
+    border:#999 1px solid;
+    padding:10px;
+    font-size:24px;
+    text-align:center;
+    margin:5px;
+    }
+div.Bluedice{
+    float:left;
+    width:32px;
+    background:Blue;
+    border:#999 1px solid;
+    padding:10px;
+    font-size:24px;
+    text-align:center;
+    margin:5px;
+}
